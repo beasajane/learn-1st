@@ -4,11 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>JS Bin</title>
-  <style>
+</head>
+ <style>
   * {
   box-shadow: 0 0 1px red;
   background-color: rgba(0, 0, 0, 0.1);
 }
+/* 顺序是什么，先进行html的结构安排，然后布局，接着缓动，最后动画，最最后为图层 */
+/* bg 具有几乎所有的布局属性，origin定位包含块，position图片相对于定位的框的位置，，size图片的大小，但不影响页面的布局 */
 section {
   width: 200px;
   height: 200px;
@@ -27,6 +30,7 @@ section > div {
   top: 0;
 }
 div > div {
+  
   float: left;
   width: 25%;
   height: 100%;
@@ -45,15 +49,19 @@ div div span {
   transition: 1s linear;
   animation: move  1s linear;
 }
+/* 第一张图里的span背景图片定位 */
 div div:nth-child(1) span {
   background-position: 0 0;
 }
+/* 第2张图里的span背景图片定位 */
 div div:nth-child(2) span {
   background-position: -50px 0;
 }
+/* 第3张图里的span背景图片定位 */
 div div:nth-child(3) span {
   background-position: -100px 0;
 }
+/* 第4张图里的span背景图片定位 */
 div div:nth-child(4) span {
   background-position: -150px 0;
 }
@@ -65,26 +73,33 @@ div div:nth-child(4) span {
     left: 100%;
   }
 }
+/* 选中了div里的第一个span */
 input:nth-child(1):checked ~ div div span:nth-child(1),
+/* 选中了div里的第一个span */
 input:nth-child(2):checked ~ div div span:nth-child(2),
 input:nth-child(3):checked ~ div div span:nth-child(3),
 input:nth-child(4):checked ~ div div span:nth-child(4) { 
   left: 0;
   animation: none;
+  xz-index: 3;
+  /* 放到最后才加 */
 }
 
 
 
-
+/* 四张图里的第一张span背景图片 */
 div div span:nth-child(1) {
   background-image: url(https://img1.kakaku.k-img.com/images/maga/14119/img01.jpg);
 }
+/* 四张图里的第2张span背景图片 */
 div div span:nth-child(2) {
   background-image: url(https://img95.699pic.com/photo/50107/9563.jpg_wh860.jpg);
 }
+/* 四张图里的第3张span背景图片 */
 div div span:nth-child(3) {
   background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8TPZkCcDOpJnKtZgIQosTp9TKW9eFMSDPWg&usqp=CAU);
 }
+/* 四张图里的第4张span背景图片 */
 div div span:nth-child(4) {
   background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEWwZAcmcIT5jW1ZJGsOuxPAN0q_p-x2Erbg&usqp=CAU);
 }
@@ -96,10 +111,8 @@ div div span:nth-child(4) {
 
 
 </style>
-</head>
-  
 <body>
-  <section>
+   <section>
   <input type="radio" name="bgcgo" checked>
   <input type="radio" name="bgcgo">
   <input type="radio" name="bgcgo">
