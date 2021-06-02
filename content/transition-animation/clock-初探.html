@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+    * {
+  background-color: rgba(0,0,0,0.06);
+  box-shadow: 0 0 1px red;
+}
+section {
+  width:280px;
+  height: 280px;
+  margin: 100px auto;
+  box-sizing: border-box;
+  border: 2px green solid;
+  border-radius: 50%;
+}
+[clock] {
+  width: 200px;
+  height: 200px;
+  border: red 2px solid;
+  border-radius: 50%;
+  position: relative;
+  transform: translatex(36px) translatey(36px);
+  
+}
+[hour], [hour] span {
+  width: 15%;
+  height: 15%;
+  display: flex;
+  box-sizing: border-box;
+  xborder: 2px blue solid;
+  border-radius: 50%;
+  justify-content: center;
+  align-items:center;
+  position: absolute;
+  transition: 2s;
+  
+}
+[hour] {
+  transform-origin: 100px 100px;
+}
+[hour] span {
+  width: 100%;
+  height:100%;
+}
+[hour]:first-child {
+  transform: rotatez(45deg);
+}
+[hour]:first-child span {
+  transform:rotatez(-45deg);
+}
+[hour]:nth-child(2) {
+  transform: rotatez(75deg);
+}
+[hour]:nth-child(2) span {
+  transform:rotatez(-75deg);
+}
+[hour]:nth-child(3) {
+  transform: rotatez(105deg);
+}
+[hour]:nth-child(3) span {
+  transform:rotatez(-105deg);
+}
+
+  </style>
+</head>
+<body>
+  <section>
+  <div clock>
+  <div hour><span>1</span></div>
+  <div hour><span>2</span></div>
+  <div hour><span>3</span></div>
+  <div hour><sapn>4</sapn></div>
+  <div hour>5</div>
+  <div hour>6</div>
+  <div hour>7</div>
+  <div hour>8</div>
+  <div hour>9</div>
+  <div hour>10</div>
+  <div hour>11</div>
+  <div hour>12</div>
+  </div>
+    </section>
+</body>
+</html>

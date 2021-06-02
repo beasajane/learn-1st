@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>jane</title>
+  <style>
+  div::first-line {
+background-color: #555555;
+  color: white;
+}
+p::first-letter {
+  font-size: 2.5em;
+  color: red;
+  float: left;
+}
+::selection {
+ color: lightblue;
+}
+/* :target CSS 伪类 代表一个唯一的页面元素(目标元素)，其id 与当前URL片段匹配 . */
+/* src href  img a link  url */
+:target {
+  background-color: #699a;
+  display:block;
+}
+/* [attr~=value]
+    表示带有以 attr 命名的属性的元素，并且该属性是一个以空格作为分隔的值列表，其中至少有一个值为 value。 */
+/* [attr^=value] 以该值为开头的， [attr$=value] 以该值为结尾的*/
+[g^=ab] {
+  font-size: 50px;
+}
+[g$=" abe"] {
+  background-image: linear-gradient(#938a 13%, #098a 40%, #345a 80%);
+}
+[gb*="c g"] {
+  border:lightgreen 2px groove;
+  border-radius: 20px 10px / 20px 40px;
+}
+  </style>
+</head>
+<body>
+<div id=a g3>
+  <span id=a1 g="abc abd abe">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id culpa illum neque, provident eveniet, harum blanditiis quos tempore velit, aut ratione tempora saepe molestias quis magnam sed aliquid at nostrum!
+  </span>
+  <span id=a2 g="acb abd abe">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque voluptate nobis similique voluptatum, magnam eius dignissimos quod. Eum saepe veritatis ducimus? Facilis sit similique provident voluptatum culpa, vero magnam quam?
+  </span>
+</div>
+<div>
+  <a href="#a" >id+a</a>
+  <a href="#a1" >id+a</a>
+  <a href="#a2" >id+a</a>
+  <a href="#b" >id+a</a>
+  <a href="" >id+a</a>  
+</div>
+  <p id=b gb="gba gbc gbre ">
+    <span>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae perferendis sequi quae, ea maiores libero accusantium numquam sit enim odit error voluptatibus sed accusamus. Beatae, vitae. Cum quas, explicabo ea.
+    </span>
+    <span gb="gba gbc gbre ">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae perferendis sequi quae, ea maiores libero accusantium numquam sit enim odit error voluptatibus sed accusamus. Beatae, vitae. Cum quas, explicabo ea.
+    </span>
+  </p>
+ 
+</body>
+</html>

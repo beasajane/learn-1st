@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+  * {
+  background-color: #0972;
+  box-shadow: 0 0 1px red inset;
+}
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: stretch;
+}
+header {
+  height: 100px;
+}
+div {
+  display: flex;
+  height: calc(100% - 100px);
+}
+aside {
+  flex-basis: 100px;
+}
+main {
+  width: calc(100% - 100px);
+  flex-grow: 1;
+  overflow: auto;
+}</style>
+</head>
+<body>
+<header>a</header>
+  <div>
+    <aside>b</aside>
+    <main>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam vitae maiores asperiores ducimus dicta cumque maxime eveniet alias autem optio porro voluptas architecto facere, minus quae expedita eaque labore a!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae dolorem itaque quam. Repellat quas quis aspernatur, assumenda. Eaque molestiae facere vel repellendus dolorum, nesciunt temporibus, magnam quia cumque architecto dolore. c</main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <!-- 需要精确计算 -->
+  <style>
+  section {
+  display: flex;
+  flex-direction: column;
+  width:540px;
+  height: 210px;
+  background-color: #fff;
+  justify-content: space-between;
+align-content: space-between;
+  flex-wrap: wrap;
+  
+}
+div {
+  background-color: #0354;
+  height: 100px;
+  width: 100px;
+}
+div:first-child {
+  height:210px;
+}
+div:nth-last-child(-n + 2) {
+  height: 45px;
+}</style>
+</head>
+<body>
+<section>
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+  <div>10</div>
+</section>
+</body>
+</html>

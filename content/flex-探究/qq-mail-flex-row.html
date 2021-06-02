@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+  * {
+  box-shadow: 0 0 1px red;
+  background-color: #0002;
+}
+html {
+  height:100%;
+}
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-flow: wrap;
+  align-content: flex-start;
+}
+header {
+  height: 80px;
+  background-color: lightblue;
+  flex-grow: 1;
+  flex-basis: 100%;
+}
+aside {
+  width: 80px;
+  background-color: #985;
+  height: calc(100% - 80px);
+}
+main {
+  height:calc(100% - 80px);
+  flex-grow: 1;
+  background-color: #2384;
+  overflow: auto;
+  flex-basis: 1%;
+  /* 在flex-items中，主轴方向的指定大小为最小宽度/高度 */
+}</style>
+</head>
+<body>
+<header>a</header>
+  <aside>b</aside>
+  <main>c Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique quibusdam facilis quaerat iure, soluta obcaecati commodi, reprehenderit quidem tenetur. Modi dignissimos odit unde cum est magni facere obcaecati libero Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo eveniet, iste facilis molestiae a dolorum, et architecto fugiat quidem culpa blanditiis! Magnam obcaecati velit incidunt ullam commodi. Facilis, dolorum, iusto!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia sequi possimus voluptates, nisi, harum voluptas aliquam laudantium sed modi sapiente unde perferendis odit hic illum delectus soluta, rem asperiores? Architecto?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis commodi porro unde aliquam, incidunt eum quibusdam accusamus facilis, suscipit placeat minima molestiae sint blanditiis, sequi reiciendis laboriosam saepe, esse veniam. aliquam!lorem</main>
+</body>
+</html>

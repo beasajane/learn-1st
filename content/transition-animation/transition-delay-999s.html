@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+    * {
+  background-color: rgba(0,0,0,0.06);
+  box-shadow: 0 0 1px red;
+}
+body {
+  margin: 0;
+}
+main {
+  position: relative;
+}
+div {
+  xposition: relative;
+  position: absolute;
+  height: 0;
+  width: 100%;
+}
+div span{
+  margin: 10px;
+  transition: 0s 999s;
+  float: left;
+  color: black;
+  transition: 0s 999s;
+}
+
+div span:first-child {
+  color:red;
+}
+div:hover span {
+  color: black;
+  transition:none;
+}
+div span:hover {
+  color: red;
+  transition:none;
+}
+
+
+div span section {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  visibility: hidden;
+  transition: 0s 999s;
+}
+div span:first-child section {
+  visibility: visible;
+}
+div:hover span section {
+  visibility: hidden;
+  transition:none;
+}
+div span:hover section {
+  visibility: visible;
+  transition: none;
+}
+
+  </style>
+</head>
+<body>
+  <div>
+    <main>
+    <span>热门
+      <section>kjl kl</section>
+    </span> 
+    <span>安防
+      <section>hellow</section>
+    </span> 
+    <span>出行
+      <section>alsk</section>
+    </span>
+      </main>
+  </div>
+</body>
+</html>

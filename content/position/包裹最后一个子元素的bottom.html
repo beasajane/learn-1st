@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <style>
+  * {
+  background-color: #0983;
+  box-shadow: 0 0 1px red;
+}
+span {
+  border: 2px blue solid;
+  xheight: 250px;
+  background-color: #fff;
+  background-color: pink;
+  position: absolute;
+}
+div {
+width: 200px;
+height: 50px;
+}
+div:nth-child(n + 6) {
+  margin-left: 200px;
+}
+div:nth-child(n + 11) {
+  margin-left: 400px;
+}
+div:nth-child(5n + 6) {
+  margin-top: -250px;
+}</style>
+  <title>JS Bin</title>
+</head>
+<body>
+<!-- div{$}*12 --> 
+  <span>
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+<div>5</div>
+<div>6</div>
+<div>7</div>
+<div>8</div>
+<div>9</div>
+<div>10</div>
+<div>11</div>
+<div>12</div>
+    <span></span>
+  </span>
+  <div>
+    span*10>lorem1
+  </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>QQ登录</title>
+<style>
+   * {
+  background-color: #9871;
+  box-shadow: 0 0 1px red;
+}
+section{
+  width: 300px;
+  height: 200px;
+  position: relative;
+  transition: 1s;
+  transform-style: preserve-3d;
+  
+}
+section:hover {
+  transform: perspective(500px) rotatey(180deg);
+}
+section div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 5;
+  background-color: #fff;
+  backface-visibility: hidden;
+}
+[b] {
+  transform: rotatey(180deg);
+  z-index: 4;
+}
+</style>
+</head>
+<body>
+<section>
+  <div>qq登录</div>
+  <div b>qq设置</div>
+</section>
+</body>
+</html>

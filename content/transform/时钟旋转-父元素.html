@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+  * {
+  box-shadow: 0 0 1px red;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+section {
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+section > div {
+  width: 50%;
+  height: 30px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -15px;
+  xmargin-bottom: -15px;
+  transform: rotate(-60deg);
+}
+div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  transform-origin: left center;
+  transform: rotate(-30deg);
+  text-align: right;
+  line-height: 30px;
+}
+div::before {
+  content:'';
+  width: 10px;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  right: 0;
+  /* 为什么用inline-block，才能显示 */
+  display: inline-block;
+  xdisplay: block;
+  top: 14px;
+  
+}
+
+  </style>
+</head>
+<body>
+<section>
+  <div>
+    <div>
+      <div>
+        <div>
+          <div>
+            <div>
+              
+  <div>
+    <div>
+      <div>
+        <div>
+          <div>
+            <div>
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>

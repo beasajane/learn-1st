@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+  *{
+  box-shadow: 0 0 1px red;
+  background-color: #00000007;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  width: 400px;
+}
+header {
+  height: 80px;
+  background-color: #98a;
+  flex-grow: 1;
+  flex-basis: 100%;
+}
+aside {
+  flex: 1 5%;
+
+  overflow: hidden;
+}
+main {
+  flex: 3;
+  overflow: hidden;
+}
+/* flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。 */
+
+/* 该属性有两个快捷值：auto (1 1 auto) 和 none (0 0 auto)。 */
+/*  flex：1； flex-grow-shrink-basis: 1 1 0%; */
+  /* flex：3；flex-grow-shrink-basis: 3 1 0%; */
+/*  flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ] */
+/* 
+min-width：auto；
+overflow：hidden； 
+组合*/</style>
+</head>
+<body>
+<header>a</header>
+  <aside>b</aside>
+  <main>c</main>
+</body>
+</html>

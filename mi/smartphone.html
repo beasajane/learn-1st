@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    X* {
+      xbackground-color: #0382;
+      box-shadow: 0 0 1px red;
+    }
+    body {
+      background-color: rgb(240,240,240);
+    }
+    [smart-phone] {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 1226px;
+      height: 614px;
+      margin: 0 auto;
+      justify-content: space-between;
+      align-content: space-between;
+      background-color: rgb(245 245 245);
+    }
+    span {
+      width: 234px;
+      height: 300px;
+    }
+    span:first-child {
+      height: 100%;
+    }
+    span:hover {
+      transition: 0.5s;
+      transform: translate(0, -2px);
+      box-shadow: 0 5px 20px RGB(200,200,200);
+    }
+    span div {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      padding: 20px 0;
+      background-color: #fff;
+    }
+    span:first-child div {
+      padding: 0;
+    }
+    img {
+      position: absolute;
+      width: 160px;
+      height: 160px;
+      left: 0;
+      right: 0;
+      margin: 0 auto; 
+    }
+    span:first-child img {
+      width: 100%;
+      height: 100%;
+    }
+    h3 {
+      text-align: center;
+      font-size: 14px;
+      margin-top: 160px;
+      margin-bottom: 10px;
+    }
+    p {
+      text-align: center;
+      font-size: 12px;
+    }
+    p[advantage] {
+      color:rgb(176,176,176);
+    }
+    p[price]{
+      color:red;
+    }
+    span[old-price] {
+      margin-left: 5px;
+      color:grey;
+      text-decoration-line:line-through;
+    }
+  </style>
+</head>
+<body>
+  <div smart-phone>
+    <span>
+      <div smartphone-container>
+      <img src="./picture/smart-phone/smart-phone-1.webp" alt="">
+      </div>
+    </span>
+    <span>
+      <div smartphone-container>
+      <img src="./picture/smart-phone/smart-phone-2.webp" alt="">
+      <h3>Note 10 Pro</h3>
+      <p advantage>天玑1100年度旗舰芯，VC液冷散热</p>
+      <p price>
+        <span new-price number>1499 </span>元起
+        <span old-price number>1699 <span>元</span></span>
+      </p>
+      </div>
+    </span>
+    <span>
+      <div smartphone-container>
+      <img src="./picture/smart-phone/smart-phone-3.webp" alt="">
+      <h3>小米11 Pro</h3>
+      <p advantage>1/1.12''GN2｜骁龙888</p>
+      <p price>
+        <span new-price number>4999 </span>元起
+        <span old-price number> <span></span></span>
+      </p>
+      </div>
+    </span>
+    <span>
+      <div smartphone-container>
+      <img src="./picture/smart-phone/smart-phone-4.webp" alt="">
+      <h3>Note 10 5G</h3>
+      <p advantage>5G小金刚，旗舰长续航</p>
+      <p price>
+        <span new-price number>999 </span>元起
+        <span old-price number>1099 <span>元</span></span>
+      </p>
+      </div>
+    </span>
+    <span>
+      <div smartphone-container>
+      <img src="./picture/smart-phone/smart-phone-5.webp" alt="">
+      <h3>小米11 青春版</h3>
+      <p advantage>小米11 青春版 轻薄</p>
+      <p price>
+        <span new-price number>2999 </span>元起
+        <span old-price number> <span></span></span>
+      </p>
+      </div>
+    </span>
+    <span>
+      <div smartphone-container>
+      <img src="./picture/smart-phone/smart-phone-6.webp" alt="">
+      <h3>小米MIX FOLD</h3>
+      <p advantage>折叠大屏｜自研芯片</p>
+      <p price>
+        <span new-price number>9999 </span>元起
+        <span old-price number> <span></span></span>
+      </p>
+      </div>
+    </span>
+    <span>
+      <div smartphone-container>
+      <img src="./picture/smart-phone/smart-phone-7.webp" alt="">
+      <h3>K40 游戏增强版</h3>
+      <p advantage>轻薄电竞设计</p>
+      <p price>
+        <span new-price number>1999 </span>元起
+        <span old-price number> <span></span></span>
+      </p>
+      </div>
+    </span>
+    <span>
+      <div smartphone-container>
+      <img src="./picture/smart-phone/smart-phone-8.webp" alt="">
+      <h3>小米11 Ultra</h3>
+      <p advantage>1/1.12''GN2｜2K四微曲屏</p>
+      <p price>
+        <span new-price number>5999 </span>元起
+        <span old-price number> <span></span></span>
+      </p>
+      </div>
+    </span>
+    <span>
+      <div smartphone-container>
+      <img src="./picture/smart-phone/smart-phone-9.webp" alt="">
+      <h3>黑鲨4 Pro</h3>
+      <p advantage>黑鲨4 Pro</p>
+      <p price>
+        <span new-price number>3999 </span>元起
+        <span old-price number> <span></span></span>
+      </p>
+      </div>
+    </span>
+  </div>
+</body>
+</html>

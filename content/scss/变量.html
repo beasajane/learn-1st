@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+  <style>* {
+  background-color: rgba(0,0,0,0.06);
+  box-shadow: 0 0 1px red;
+}
+section {
+  --w: 100px;
+  --h: 50px;
+  --bgc: red;
+  --col: 5;
+  --row: 5;
+  --col-gap: 10px;
+  width: calc(var(--w) * var(--col) + (var(--col) - 1) * var(--col-gap));
+  height: calc(var(--row) * var(--h));
+}
+div {
+  width:var(--w);
+  height:var(--h);
+}
+div:nth-child(n + 6) {
+  margin-left: calc(1 * var(--w) + var(--col-gap));
+}
+div:nth-child(n + 11) {
+  margin-left:calc( 2 * (var(--w) + var(--col-gap)));
+}
+div:nth-child(n + 16) {
+  margin-left:calc( 3 * (var(--w) + var(--col-gap)));
+}
+div:nth-child(n + 21) {
+  margin-left:calc( 4 * (var(--w) + var(--col-gap)));
+}
+div:nth-child(5n + 6) {
+  margin-top: calc(0px - (var(--h) * var(--row)));
+}
+
+
+
+
+
+
+</style>
+<body>
+  <section>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </section>
+</body>
+</html>

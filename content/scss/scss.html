@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+  * {
+  box-shadow: 0 0 1px red;
+}
+section {
+  width: 100px;
+  height: 100px;
+  background-color: #209232;
+  > div{
+    width: 50px;
+  height: 50px;
+    background-color: red;
+  position: absolute;
+    span::before {
+      content: 'hellow';
+    }
+  }
+}
+
+  </style>
+</head>
+<body>
+<section>
+  <div>
+    <span>
+      <div></div>
+    </span>
+  </div>
+</section>
+</body>
+</html>

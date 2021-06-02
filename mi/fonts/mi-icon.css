@@ -1,0 +1,41 @@
+
+    @font-face {
+  font-family: "mi-icon";
+  src: url(./xiaomi-icon-font.woff) format("woff");
+}
+.icon {
+  xfont-family: "mi-icon";
+  display: inline-block;
+  font: normal normal normal 14px/1 "mi-icon";
+  font-size: inherit;
+  box-sizing: border-box;
+}
+.icon-bgi {
+  color: red;
+  background-image: linear-gradient(#039, #906, #02834597);
+}
+.icon-1x::before {
+  font-size: 1.5em;
+  vertical-align: middle;
+}
+.icon-2x::before {
+  font-size: 2em;
+}
+.icon-5x::before {
+  font-size: 5em;
+}
+.icon-tool::before {
+  content: "\e634";
+}
+.icon-n7::before {
+  content: "\e635";
+}
+.icon-n15::before {
+  content: "\e636";
+}
+.icon-package::before {
+  content:"\e638";
+}
+.icon-coordinate::before {
+  content: "\e637";
+}

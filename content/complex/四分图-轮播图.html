@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+  * {
+  box-shadow: 0 0 1px red;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+section {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin: 200px;
+}
+input {
+  position: relative;
+  top: -25px;
+  xmargin-top: -25px;
+}
+section > div {
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+div > div {
+  float: left;
+  width: 25%;
+  height: 100%;
+  position: relative;
+  /* 为什么有时候不能用 */
+  overflow: hidden;
+}
+div div span {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  background-size: 200px 100%;
+  background-repeat: no-repeat;
+  transition: 1s linear;
+  animation: move  1s linear;
+}
+div div:nth-child(1) span {
+  background-position: 0 0;
+}
+div div:nth-child(2) span {
+  background-position: -50px 0;
+}
+div div:nth-child(3) span {
+  background-position: -100px 0;
+}
+div div:nth-child(4) span {
+  background-position: -150px 0;
+}
+@keyframes move {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 100%;
+  }
+}
+input:nth-child(1):checked ~ div div span:nth-child(1),
+input:nth-child(2):checked ~ div div span:nth-child(2),
+input:nth-child(3):checked ~ div div span:nth-child(3),
+input:nth-child(4):checked ~ div div span:nth-child(4) { 
+  left: 0;
+  animation: none;
+}
+
+
+
+
+div div span:nth-child(1) {
+  background-image: url(https://img1.kakaku.k-img.com/images/maga/14119/img01.jpg);
+}
+div div span:nth-child(2) {
+  background-image: url(https://img95.699pic.com/photo/50107/9563.jpg_wh860.jpg);
+}
+div div span:nth-child(3) {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8TPZkCcDOpJnKtZgIQosTp9TKW9eFMSDPWg&usqp=CAU);
+}
+div div span:nth-child(4) {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEWwZAcmcIT5jW1ZJGsOuxPAN0q_p-x2Erbg&usqp=CAU);
+}
+
+
+
+
+
+
+
+</style>
+</head>
+  
+<body>
+  <section>
+  <input type="radio" name="bgcgo" checked>
+  <input type="radio" name="bgcgo">
+  <input type="radio" name="bgcgo">
+  <input type="radio" name="bgcgo">
+  <div>
+    <div>
+      <span i1 f></span>
+      <span i1 s></span>
+      <span i1 t></span>
+      <span i1 fo></span>
+    </div>
+
+    <div>
+      <span i2 f></span>
+      <span i2 s></span>
+      <span i2 t></span>
+      <span i2 fo></span>
+    </div>
+
+    <div>
+      <span f></span>
+      <span s></span>
+      <span t></span>
+      <span fo></span>
+    </div>
+
+    <div>
+      <span f></span>
+      <span s></span>
+      <span t></span>
+      <span fo></span>
+    </div>
+    </div>
+  </section>
+</body>
+</html>

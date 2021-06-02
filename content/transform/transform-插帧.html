@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+    * {
+  background-color: rgba(0,0,0,0.06);
+  box-shadow: 0 0 1px red;
+}
+section {
+  width: 200px;
+  height: 200px;
+ text-align: center;
+  margin: 200px;
+}
+
+div[b]{
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  transition: 10s linear;
+  transform: rotate(3600deg) translatex(140px) translatey(140px)  rotate(-3600deg)  ;
+}
+div[a]{
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+ animation: 20s circle infinite linear;
+}
+@keyframes circle {
+  from {
+    transform: rotate(0deg)  translate(300px) rotate(0deg);
+  }
+  to {
+    transform: rotate(720deg) translate(300px) rotate(-720deg) ;
+  }
+}
+</style>
+</head>
+<body>
+  <section>
+    
+    
+    <div b >a</div>
+  <div a></div>
+  </section>
+  
+</body>
+</html>

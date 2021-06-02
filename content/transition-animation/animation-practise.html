@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+    * {
+  background-color: #9871;
+  box-shadow: 0 0 1px red;
+}
+@keyframes foo {
+ from {
+    transform: rotato(0deg);
+    color: red;
+    /* 0%  */
+  }
+  30%, 75% {
+    color: green;
+  }
+  50% {
+    color: blue;
+  }
+  to {
+    transform: rotate(150deg);
+    color: red;
+    /* 100% to */
+  }
+}
+div {
+  animation: foo 10s steps(20) both;
+}
+
+  /* infinite 无穷大 */
+  /* steps(60) */
+  /* delay  reverse */
+  /* alternate 正反各播一次 */
+/* animation-name: foo 3s 0s linear infinite;
+animation-name: foo;
+animation-duration: 5s;
+animation-delay: 0s;
+animation-timing-function:;
+animation-iteration-count: infinite;
+animation-direction:alternate-reverse; */
+div:hover {
+  animation-play-state: paused;
+  /* animation-fill-mode: 
+    forwards/both; */
+}
+
+
+
+
+
+  </style>
+</head>
+<body>
+<div>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione qui nostrum saepe esse sint, incidunt, quis suscipit officia, excepturi perferendis inventore tempora, odit optio consequuntur? Ex ipsam nam aut, hic.
+</div>
+</body>
+</html>

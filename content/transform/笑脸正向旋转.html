@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <style>
+  
+section {
+  height: 200px;
+  width: 200px;
+  xborder: 2px dotted lightblue;
+  transform-origin: 50% 50%;
+  margin: 30px;
+  animation: movef 10s infinite linear;
+}
+div {
+  height: 40px;
+  width: 40px;
+  box-sizing: border-box;
+}
+div::before {
+  display: block;
+  font-size: 40px;
+  color: brown;
+  background-image: linear-gradient(#972, #023, #534);
+  animation: move 10s infinite linear;
+}
+    @keyframes move {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(-360deg)
+      }
+    }
+    @keyframes movef {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+</style>
+  <title>JS Bin</title>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <section>
+      <div class="fa fa-smile-o"></div>
+  </section>
+
+</body>
+</html>

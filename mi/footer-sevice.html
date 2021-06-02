@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./fonts/mi-icon.css">
+  <style>
+    x* {
+      background-color: #0721;
+      box-shadow: 0 0 1px red;
+    }
+    table {
+      background-color: #fff;
+      border-collapse: collapse;
+      width: 1226px;
+      height: 80px;
+      margin: 0 auto;
+      border-bottom: 1px rgb(224,224,224) solid;
+    }
+    td {
+      height: 80px;
+      width: 19.9%;
+      text-align: center;
+      vertical-align: middle;
+      padding: 0;
+      color: rgb(97,97,97);
+    }
+    td span {
+      width: 100%;
+      border-right: 1px grey solid;
+      transition: 0.2s;
+    }
+    .icon::before {
+      padding-right: 4px;
+      font-weight: 600;
+    }
+    td span:hover {
+      color: rgb(255,103,0);
+      transition: 0.3s;
+    }
+
+  </style>
+</head>
+<body>
+  <table>
+    <td class="icon icon-tool"><span>预约维修服务</span></td><!--
+  --><td class="icon icon-n7"><span>7天无理由退货</span></td><!--
+  --><td class="icon icon-n15"><span>15天免费换货</span></td><!--
+  --><td class="icon icon-package"><span>满69包邮</span></td> <!--
+  --><td class="icon icon-coordinate"><span>520余家售后网点</span></td>
+  </table>
+  <table>
+    <td><span class="icon icon-tool icon-1x">预约维修服务</span></td>
+    <td><span class="icon icon-n7 icon-1x">7天无理由退货</span></td>
+    <td><span class="icon icon-n15 icon-1x">15天免费换货</span></td>
+    <td><span class="icon icon-package icon-1x">满69包邮</span></td>
+    <td><span class="icon icon-coordinate icon-1x">520余家售后网点</span></td>
+  </table>
+</body>
+</html>

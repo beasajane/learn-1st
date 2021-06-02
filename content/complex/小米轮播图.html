@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+  * {
+  background-color: #9872;
+  box-shadow: 0 0 1px red;
+}
+.a {
+  width: 230px;
+  height: 180px;
+  position: fixed;
+  top: 0; bottom: 0; left: 0; right: 0;
+  margin: auto;
+  border:lightgreen 1px dashed;
+  z-index: 1;
+}
+input {
+  position: relative;
+  top: -25px;
+}
+.imgs {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+.i {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  left: -100%;
+  /* 缓动时间 所有都缓动*/
+  transition: 2s linear;
+  animation: move 3s linear;
+}
+.right-icon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 0;
+  top: 50%;
+  transform: translatey(-50%);
+  z-index: 3;
+}
+.right-icon label {
+  position: absolute;
+  width:100%;
+  height: 100%;
+  z-index: 4;
+  cursor: pointer;
+}
+.left-icon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 0;
+  top: 50%;
+  transform: translatey(-50%);
+  z-index: 3;
+}
+
+.left-icon label {
+  position: absolute;
+  width:100%;
+  height: 100%;
+  z-index: 4;
+  cursor: pointer;
+}
+input:nth-child(1):checked ~ div.right-icon label:nth-child(1),
+input:nth-child(2):checked ~ div.right-icon label:nth-child(2),
+input:nth-child(3):checked ~ div.right-icon label:nth-child(3),
+input:nth-child(4):checked ~ div.right-icon label:nth-child(4),
+input:nth-child(1):checked ~ div.left-icon label:nth-child(1),
+input:nth-child(2):checked ~ div.left-icon label:nth-child(2),
+input:nth-child(3):checked ~ div.left-icon label:nth-child(3),
+input:nth-child(4):checked ~ div.left-icon label:nth-child(4)
+{
+  z-index: 5;
+}
+
+input:nth-child(1):checked ~ div.label label:nth-child(1),
+input:nth-child(2):checked ~ div.label label:nth-child(2),
+input:nth-child(3):checked ~ div.label label:nth-child(3),
+input:nth-child(4):checked ~ div.label label:nth-child(4){
+  background-color: magenta;
+}
+
+.label {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  xgap: 50px;
+  justify-content: space-around;
+  bottom: -20px;
+}
+.label label {
+  width: 10px;
+  height: 10px;
+  border: 2px black solid;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
+input:nth-child(1):checked ~ div img:nth-child(1),
+input:nth-child(2):checked ~ div img:nth-child(2),
+input:nth-child(3):checked ~ div img:nth-child(3),
+input:nth-child(4):checked ~ div img:nth-child(4){
+  left: 0;
+  animation: 1s;
+  z-index: 2;
+}
+@keyframes move {
+  from {
+    left:0%;
+  }
+  to {
+    left: 100%;
+  }
+}
+.img1 {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8TPZkCcDOpJnKtZgIQosTp9TKW9eFMSDPWg&usqp=CAU);
+}
+.img2 {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEWwZAcmcIT5jW1ZJGsOuxPAN0q_p-x2Erbg&usqp=CAU);
+}
+.img3 {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWuC9-q_PT5akY7g2GH7IRziIHyE2YRrZeKQ&usqp=CAU);
+}
+.img4 {
+  background-image: url(https://img95.699pic.com/photo/50107/9563.jpg_wh860.jpg);</style>
+</head>
+<body>
+   <div class="a">
+    <input type="radio" name="imegs" id="bgc-1">
+    <input type="radio" name="imegs" id="bgc-2">
+    <input type="radio" name="imegs" id="bgc-3">
+    <input type="radio" name="imegs" id="bgc-4">
+     <div class="right-icon">
+     <label for="bgc-2">></label>
+     <label for="bgc-3">></label>
+     <label for="bgc-4">></label>
+     <label for="bgc-1">></label>
+       </div>
+     <div class='left-icon'>
+     <label for="bgc-4"><</label>
+     <label for="bgc-1"><</label>
+     <label for="bgc-2"><</label>
+     <label for="bgc-3"><</label>
+       </div>
+     <div class='label'>
+     <label for="bgc-1"></label>
+     <label for="bgc-2"></label>
+     <label for="bgc-3"></label>
+     <label for="bgc-4"></label>
+       </div>
+    <!-- imgs每个图框 imgs1第一个图框 -->
+      <div class="imgs">
+      <!-- i: 所有图 img-1: 图的第一个四分之一 img1第一个图 -->
+      <img class="i img-1 img1" title="img1-1/4">
+      <img class="i img-1 img2" title="img2-1/4">
+      <img class="i img-1 img3" title="img3-1/4">
+      <img class="i img-1 img4" title="img4-1/4">
+      </div>
+</body>
+</html>

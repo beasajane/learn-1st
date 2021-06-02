@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+    *{
+  box-shadow: 0 0 1px red;
+  background-color: #00000007;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  xalign-items: flex-start;
+  xalign-content: flex-start;
+}
+header {
+  xheight: 80px;
+  background-color: #98a;
+  flex-grow: 1;
+  flex-basis: 100%;
+}
+aside {
+  width: 80px;
+  height:50px;
+  xheight: calc(100% - 80px);
+  align-self: stretch;
+}
+  </style>
+</head>
+<body>
+<header>a</header>
+  <aside>b</aside>
+  <main>c</main>
+</body>
+</html>
