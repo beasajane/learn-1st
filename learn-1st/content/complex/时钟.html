@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<ht ml>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+  x* {
+  box-shadow: 0 0 1px red;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+[ab]{
+  --time-hour: 5;
+  --time-mine: 15;
+  --unit: 1deg;
+  --hou: calc(var(--time-hour) * var(--unit));
+  --sec: calc(var(--time-mine) * var(--unit));
+  --c: 360;
+  --s: 6;
+  --k: 30;
+  --t-s: calc(var(--hou) * var(--c) * var(--c) + var(--sec) * var(--c));
+  --t-m: calc(var(--hou) * var(--c) + var(--sec) * var(--s));
+  --t-h: calc(var(--hou) * var(--k) );
+    
+  width: 300px;
+  height: 300px;
+  position: relative;
+  padding: 50px;
+  border: 1px red solid;
+  xborder-radius: 100%;
+  margin: 100px;
+}
+
+
+[cursor] {
+   
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  padding: 50px;
+  top: 0;
+  left: 0;
+}
+[cursor] div[f] {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-5px, -5px);
+  background-color: #000;
+  border-radius: 100%;
+}
+[cursor] div[t] {
+  width: 0;
+  
+  box-sizing: border-box;
+  
+  position: absolute;
+  border-radius: 100%;
+  
+  xtransition: 5s linear;
+  transform: rotate(-90deg);
+  
+  box-shadow: 0 0 0px 10px inset, 0 0 0px 10px inset;
+  
+}
+[cursor] div[s] {
+  height: 2px;
+  top: calc(50% - 1px);
+  left: calc(50% - 10px);
+  border-left: solid 85px;
+  border-right:  solid 85px;
+  transform-origin: 10px center;
+  animation: 43200s move-seconds steps(43200) infinite;
+  border-color: red;
+}
+[cursor] div[m] {
+  height: 4px;
+  top: calc(50% - 2px);
+  left: calc(50% - 10px);
+  border-left: solid 75px;
+  border-right:  solid 75px;
+  transform-origin: 10px center;
+  animation: 43200s move-mins steps(720) infinite;
+  border-color: blue;
+}
+
+[cursor] div[h] {
+  height: 8px;
+  top: calc(50% - 4px);
+  left: calc(50% - 10px);
+  border-left: solid 50px;
+  border-right:  solid 50px;
+  transform-origin: 10px center;
+  animation: 43200s move-hours infinite;
+  border-radius: 0;
+  border-color: #000;
+}
+
+
+
+
+@keyframes move-seconds {
+  from {
+    transform: rotate(-90deg);
+  }
+  to {
+    transform: rotate(calc(259200deg - 90deg));
+  }
+}
+@keyframes move-mins {
+  from {
+    transform: rotate(calc(var(--t-m) - 90deg));
+  }
+  to {
+    transform: rotate(calc(4320deg  - 90deg));
+  }
+}
+@keyframes move-hours {
+  from {
+    transform: rotate(calc(var(--t-h) - 90deg));
+  }
+  to {
+    transform: rotate(calc(360deg - 90deg));
+  }
+}
+
+
+
+xsection[a] {
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+section[a] > div {
+  width: 50%;
+  height: 30px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -15px;
+  xmargin-bottom: -15px;
+  transform: rotate(-60deg);
+}
+[a] div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  transform-origin: left center;
+  transform: rotate(-30deg);
+  text-align: right;
+  line-height: 30px;
+}
+[a] div::before {
+  content:'';
+  width: 10px;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  right: 0;
+  /* 为什么用inline-block，才能显示 */
+  display: inline-block;
+  xdisplay: block;
+  top: 14px;
+  
+}
+
+xsection[b] {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+section[b] div {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+  line-height: 30px;
+  xborder: 1px black solid;
+  xborder-radius: 50%;
+}
+section[b] div:nth-child(1) {
+  transform: rotate(-60deg) translate(170px) rotate(60deg);
+}
+section[b] div:nth-child(2) {
+  transform: rotate(-30deg) translate(170px) rotate(30deg);
+}
+section[b] div:nth-child(3) {
+  transform: rotate(-0deg) translate(170px) rotate(0deg);
+}
+section[b] div:nth-child(4) {
+  transform: rotate(30deg) translate(170px) rotate(-30deg);
+}
+section[b] div:nth-child(5) {
+  transform: rotate(60deg) translate(170px) rotate(-60deg);
+}
+section[b] div:nth-child(6) {
+  transform: rotate(90deg) translate(170px) rotate(-90deg);
+}
+section[b] div:nth-child(7) {
+  transform: rotate(120deg) translate(170px) rotate(-120deg);
+}
+section[b] div:nth-child(8) {
+  transform: rotate(150deg) translate(170px) rotate(-150deg);
+}
+section[b] div:nth-child(9) {
+  transform: rotate(180deg) translate(170px) rotate(-180deg);
+}
+section[b] div:nth-child(10) {
+  transform: rotate(210deg) translate(170px) rotate(-210deg);
+}
+section[b] div:nth-child(11) {
+  transform: rotate(240deg) translate(170px) rotate(-240deg);
+}
+section[b] div:nth-child(12) {
+  transform: rotate(270deg) translate(170px) rotate(-270deg);
+}
+</style>
+</head>
+<body>
+<section ab>
+<section a>
+  <div>
+    <div>
+      <div>
+        <div>
+          <div>
+            <div>
+              
+  <div>
+    <div>
+      <div>
+        <div>
+          <div>
+            <div>
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section >
+  <section b>
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+  <div>10</div>
+  <div>11</div>
+  <div>12</div>
+</section>
+  <section cursor>
+    <div f></div>
+    <div s t></div>
+    <div m t></div>
+    <div h t></div>
+  </section>
+  </section>
+</body>
+</html>
