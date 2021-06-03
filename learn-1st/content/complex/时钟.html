@@ -11,11 +11,13 @@
 }
 
 
-
+/* 给time-hour赋值即可固定到当前小时
+给time-mine赋值即可固定到当前分钟
+ 12小时制*/
 
 [ab]{
-  --time-hour: 5;
-  --time-mine: 15;
+  --time-hour: 10;
+  --time-mine: 46;
   --unit: 1deg;
   --hou: calc(var(--time-hour) * var(--unit));
   --sec: calc(var(--time-mine) * var(--unit));
