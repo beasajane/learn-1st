@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+  * {
+  box-shadow: 0 0 1px #097;
+  background-color: #0001;
+}
+div.counter::after {
+  content: "00";
+  animation:x numbers 10s infinite;
+}
+@keyframes numbers {
+  from {
+    content: "10";
+  }
+  10% {
+    content: "01";
+  }
+  20% {
+    
+    content: "02";
+  }
+  
+  30% {
+    
+    content: "03";
+  }
+  40% {
+    
+    content: "04";
+  }
+  50% {
+    
+    content: "05";
+  }
+  60% {
+    
+    content: "06";
+  }
+  70% {
+    
+    content: "07";
+  }
+  80% {
+    
+    content: "08";
+  }
+  90% {
+    
+    content: "09";
+  }
+  
+  to {
+    
+    content: "10";
+  }
+}
+div.ten {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+div.ten span {
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  xanimation: keys 5s  33 steps(10);
+}
+
+@keyframes keys {
+  from {
+    top: 0;
+  }
+  to {
+    top: -200px;
+  }
+}</style>
+</head>
+<body>
+<div class="counter"></div>
+  
+<div class="ten">
+  <span> 0 1 2 3 4 5 6 7 8 9</span>
+</div>
+</body>
+</html>

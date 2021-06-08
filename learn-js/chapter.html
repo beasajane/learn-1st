@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  jsADHF
+  <script>
+    //64bit 8字节  一个字节（byte）为 8bit 值，数据类型：number、string、Boolean、undefined
+  // oparetor 运算符 unary binary ternary  优先级
+  // number 整数、小数、NaN（not a number)、
+  //string "内容"  连字符 +  // automatic type convertion ==
+  //boolean true false 
+  // null  undefined  无意义的值
+  // unary: typeof   !   -  
+  /* binary:运算符 + - *  / %   余数运算符和加减乘除一样，只是得到的result 为整除后的余数。
+    比较运算符< > ==  >= <= != (greater less equaity)                    
+    逻辑运算符   &&    ||   */
+  // 能产生Boolean值的，比较运算，逻辑运算，条件运算
+  // ternary:  ?  :  三元运算，也是条件运算。
+  // 逻辑运算符短路 a && b && c && d  从左往右，第一个为false的值  a || b || c || d 从左往右，第一个为true的值    
+    console.log( typeof 23);
+    console.log(24 * 9023978)
+    console.log(6 > 2)
+    console.log(3 < 2 / 2)
+    console.log( 15 > 3 * 5)
+    console.log("我" > " a")
+      c = 3 > 5 ? 3 : 2;
+      console.log(c)
+      console.log( "3" + 2)
+      console.log(2 + "3")
+      console.log(NaN != NaN)
+      console.log("我是分割线")
+
+      x = 2035;
+console.log( x ) // 输出x
+console.log( x * 2 ) // 输出x的两倍
+console.log( x * x ) // 输出x的平方
+console.log( x * x * x * x * x  ) // 输出x的五次平方
+console.log( x >= 50 && x <= 100 ? true : false  ) // 输出x是否在50到100以内，是输出true，不是输出false
+console.log( x % 2 ? true : false  ) // 输出x是否为奇数，是输出true，不是输出false
+console.log( !(x % 2) ? true : false ) // 输出x是否为偶数，是输出true，不是输出false
+console.log( x % 10 ) // 输出x的个位数
+console.log( x % 100 ) // 输出x百位数以下的部分，对于2021，即输出21，对于2035，即输出35
+console.log(x > 200 && !(x % 3) && x % 7 ? true : false) // 输出x是否大于200且为3的倍数但不是7的倍数。
+console.log( ( x - x % 100 ) / 100 + 1 )  // 输出x做为年份时，所在的世纪，对于2021即输出21，对于1864即输出19
+console.log( !(x % 4) ? true : false ) // 输出x做为年份时，是否为闰年，是输出true，不是输出false
+
+console.log( x == 2 || x == 3 || x == 5 || x == 7 || x == 11 || x == 13 || x == 17 || x == 19 || x == 23 || x == 29 || x == 31 || x == 37 || x == 41 || x == 43 || x == 47 || x == 53 || x == 59 || x == 61 || x == 67 || x == 71 || x == 73 || x == 79 || x == 83 || x == 89 || x == 97 || false ? true : false ) // 输出x是否为素数（此时x范围为100以内）
+      
+
+
+      // y = XXXX // 写出表达式，当x是素数时（此时x为100以内的数），y为真，否则为假 
+      // 由于逻辑运算符的短路特性，逻辑或 ||  和 逻辑与 &&   会将运算符的左侧表达时转换为布尔值，
+      // 当 逻辑或 左侧值为真（true）时，返回左侧值，否则返还右侧值。
+      // 当 逻辑与 左侧值为假（false）时，返回左侧值，否则返还右侧值。
+      // 条件运算符 会将判断符（？）左侧的值转换为布尔值，来确定是选（:）左侧值还是右侧值。
+      var u = 6;
+      console.log (u == 2 || u == 3 || u == 5 || u == 7 || u == 11 || u == 13 || u == 17 || u == 19 || u == 23 || u == 29 || u == 31 || u == 37 || u == 41 || u == 43 || u == 47 || u == 53 || u == 59 || u == 61 || u == 67 || u == 71 || u == 73 || u == 79 || u == 83 || u == 89 || u == 97 || false ? true : false)
+     // 由于自动类型转换，0 的布尔值为false，""空字符串的布尔值为false，NaN 非数字的布尔值为false；
+      var s;
+     s = 50;
+      console.log(s % 2 ? true : false );
+//       x的5次方。
+var t = 5;
+console.log ( t * t * t * t * t)
+// x是否在32到100以内。
+var g = 50;
+console.log(g >= 50 && g <= 100 ? true : false)
+console.log(g >= 50 && g <= 100)
+console.log(3 && 4 && 0 && 2)
+  </script>
+</body>
+</html>

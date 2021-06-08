@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+ <style>
+  * {
+  box-shadow: 0 0 1px ;
+  background-color: #2333;
+}
+.first-level {
+  width: 500px;
+  height: 100px;
+  position: relative;
+  margin-top: 25px;
+}
+input {
+  position: relative;
+  top: -25px;
+  zdisplay: none;
+}
+.hidden {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.second-level {
+  width: 1290px;
+  height: 100px;
+  display: flex;
+  position:absolute;
+  top: 0;
+  left: 0;
+  transition: 1s;
+}
+.second-level span {
+      width: 100px;
+      height:100px;
+ }
+input:nth-child(1):checked ~ div .second-level {
+  left: 0;
+}
+input:nth-child(2):checked ~ div .second-level {
+  left: -500px;
+}
+input:nth-child(3):checked ~ div .second-level {
+  left: -700px;
+}
+
+.left-button label{
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  right: 30px;
+  top: -20px;
+  z-index: 4;
+}
+.right-button label{
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: -20px;
+  right: 0;
+  z-index: 4;
+}
+
+input:nth-child(2):checked ~ .left-button label:nth-child(1),
+input:nth-child(3):checked ~ .left-button label:nth-child(2),
+
+input:nth-child(1):checked ~ .right-button label:nth-child(2),
+input:nth-child(2):checked ~ .right-button label:nth-child(3),
+{
+  background-color: red;
+  z-index: 5;
+}</style>
+</head>
+<body>
+<div class="first-level">
+  <input type="radio" name="horizontal-slider" id="f" checked>
+  <input type="radio" name="horizontal-slider" id="s">
+  <input type="radio" name="horizontal-slider" id="t">
+  
+  <div class="left-button">
+    <label for="f"></label>
+    <label for="s"></label>
+    <label for="t"></label>
+  </div>
+  
+  <div class="right-button">
+    <label for="f"></label>
+    <label for="s"></label>
+    <label for="t"></label>
+  </div>
+  <div class="hidden">
+    <div class="second-level">
+      <span>1</span>
+      <span>2</span>
+      <span>3</span>
+      <span>4</span>
+      <span>5</span>
+      <span>6</span>
+      <span>7</span>
+      <span>8</span>
+      <span>9</span>
+      <span>10</span>
+      <span>11</span>
+      <span>12</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>
