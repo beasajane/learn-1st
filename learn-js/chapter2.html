@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    var a = Number(prompt('请输入a的值：'))
+    var b = +prompt("请输入b的值")
+    var c = prompt('请输入c的值') - 0
+    
+    var delta = b * b - 4 * a * c
+    var sd = Math.sqrt( delta )
+    var x1 = (-b + sd) / (2 * a)
+    var x2 = (-b - sd) / (2 * a)
+    if (delta < 0) console.log("没有根")
+    else {
+      if (delta = 0) console.log("有唯一根%s", x1)
+      else  console.log("有两个实根%s，%s", x1.toFixed(2), x2.toFixed(2))
+    }
+  </script>
+</body>
+</html>
