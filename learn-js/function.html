@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function count3(n) {
+      var count = 0
+      do {
+        var digit = n % 10
+        n = (n - digit) / 10
+        if(digit == 3) {
+          count++
+        }
+      }while(n)
+      return count
+    }
+    debugger
+    console.log(count3(13246123))
+  </script>
+</body>
+</html>
