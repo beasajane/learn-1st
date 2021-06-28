@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var backspaceCompare = function(s, t) {
+    let results = [], resultt = []
+    for(let i = 0; i < s.length ; i++) {
+        if(s[i] == '#') {
+            results.pop()
+        }else {
+            results.push(s[i])
+        }
+    }
+    s = results.join('')  // 将一个数组转成字符串 s = result.join('#')
+    for(let i = 0; i < t.length ; i++) {
+        if(t[i] == '#') {
+            resultt.pop()
+        }else {
+            resultt.push(t[i])
+        }
+    }
+    t = resultt.join('')
+    // if(t == s) return true
+    // else return false
+    return s == t
+};
+  </script>
+</body>
+</html>

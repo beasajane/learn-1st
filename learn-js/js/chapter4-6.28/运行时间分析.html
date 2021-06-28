@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function maxSubArray(array) {
+      if (array.length == 0) {
+        return 0
+      }
+      if (array.length == 1) {
+        return Math.max(array[0], 0) 
+      }
+
+      var mid = array.length >> 1 // 取中点
+      var midLeftMax = 0
+      var midLeftSum = 0
+      for (var i = mid; i >= 0; i--) { // 从中点往左遍历
+        midLeftSum += array[i] 
+        if(midLeftSum > midLeftMax) {
+          midLeftMax = midLeftSum 
+        }
+      }    
+      var midRightMax = 0
+      var midRightSum = 0
+      for (var i = mid + 1; i < array.length ; i++) { // 从中点往左遍历
+        midRightSum += array[i] 
+        if(midRightSum > midRightMax) {
+          midRightMax = midRightSum 
+        }
+      } 
+      var midMax = midLeftMax + midRightMax 
+
+      var letf = array.slice(0, mid)
+      var rigth = array.slice(mid)
+
+      var leftMax = maxSubArray(left) // 递归
+      var rightMax = maxSubArray(right)
+
+      return Math.max(midMax, leftMax, rightMax) // 判断左中右 最大值
+    }
+  </script>
+</body>
+</html>

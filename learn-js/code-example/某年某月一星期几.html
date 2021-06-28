@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 判断某年，某月，某日星期几
+    function date(year, month, day) { 
+      let days = toYearDays(year) + toMonthDays(year,month) + (day - 1)
+      // (day - 1)
+      // 从元年到现在的月份的所有天已经得到，
+      // 需要知道元年元月第一天时星期几，然后推算到该年该月一号星期几
+      return days % 7 //所有天数 模上 7
+      }
+
+    function toYearDays(year) { // 该函数没有应用性，多个功能混杂在一起
+      //计算从0年到n年有x闰年，则多加x天
+      let leaps = 0 // 闰年计数器
+      for(let i = 1; i < year ; i++) {
+        if(yearIsLeap(i)) leaps++
+      }
+      return year * 365 + leaps 
+    }
+
+    // 计算从一月份到到该月份的天数
+    function toMonthDays(year,month) {
+      let dayOfAllMonth = 0
+      for(let j = 1; j < month ; j++) {
+        dayOfAllMonth += getMonthDay(year, j)
+      }
+      return dayOfAllMonth
+    }
+
+    // 判断闰年
+    function yearIsLeap(n) { //返回Boolean 值，作为条件判断的表达式
+        if(n % 400 == 0 || n % 100 !== 0 && n % 4 == 0) return true
+      }
+    // 判断某一月份的天数
+    function getMonthDay(year,month) {  
+        //得到某一个月的天数，不要糅杂，将前面所有月份的天数加起来，函数的功能要明确，唯一，才能适应性更广
+        switch(month) { // 分支条件语句
+          case 1: return 31
+          case 2: 
+            if(yearIsLeap(year)) return 29 
+            // 直到需要用什么函数，先将函数名写下来，然后再编写这个函数的代码
+            else return 28
+          case 3: return 31
+          case 4: return 30
+          case 5: return 31
+          case 6: return 30
+          case 7: return 31
+          case 8: return 31
+          case 9: return 30
+          case 10: return 31
+          case 11: return 30
+          case 12: return 31
+        }
+    }
+    function getMonthDays (year, month) {
+      switch(month){
+        case 4:
+        case 6:
+        case 9:
+        case 11: 
+        return 30
+        case 2: 
+        if(yearIsLeap(year)) {
+          return 29
+        } else {
+          return 28
+        }
+        default: return 31
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var addDigits = function(num) {
+    if(num == 0) return 0
+    if(num % 9 == 0) return 9
+    return num % 9
+}
+
+var addDigits2 = function(num) {
+    let result = 0
+    while(num) {
+        let digit = num % 10
+        result = result + digit
+        num = (num - digit) / 10
+    }
+    if (result > 9) return addDigits(result)
+    return result
+};
+
+var addDigits1 = function(num) {
+    num = String(num)
+    let result = 0
+    for(let i = 0; i < num.length; i ++) {
+        result = result + Number(num[i])
+    }
+    if(String(result).length > 1) return addDigits(result)
+    if(String(result).length = 1) return result
+};
+  </script>
+</body>
+</html>

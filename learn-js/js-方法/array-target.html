@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  // 数组的方法 20个做出来
+  <script>
+    function indexOf(array,target) { // 从前往后遍历数组，查找第一个目标元素，并返回该元素的索引
+      for(let i = 0; 1 < array.length; i++) {
+        if(array[i] === target)  return i
+      }
+    }
+    function lastIndexOf(array,target) { // 从后往前遍历数组，查找第一个目标元素，并返回元素的索引
+      for(let i = array.length - 1; i >= 0; i--) {
+        if(array[i] == target) return i
+      }
+    }
+  </script>
+  
+  <script>
+    function slice(array,start,end) {
+      var result = []
+      if(end > array.length) end = array.length
+      for(let i = 0; i < array.length; i++) {
+        result = array[i]
+      }
+      return result
+    }
+  </script>
+  <script>
+    function 
+  </script>
+  <script>
+    function concat(base,ary) {
+      let array = []
+      let m = 0
+      for(let j = 0; j < base.length; j++){
+        array[m++] = base[j]
+      }
+      for(let i = 0; i < base.length; i++){
+        array[m++] = ary[i]
+      }
+      return array
+    }
+  </script>
+  <script>
+    function concat(base,ary) {
+      let array = []
+      let j = 0
+      let i = 0
+      array[j++] = base[j++]
+      array[j++] = ary[i++]
+    }
+  </script>
+  <script>
+    function sum() {
+      var sum = 0
+      for(var i = 0; i< aguments.length; i++) {
+        sum +=arguments[i]
+      }
+      return sum 
+    }
+    sum(1,3,4,5,4)
+  </script>
+</body>
+</html>

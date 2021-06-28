@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function f() {
+      if(Math.random() < p) {  // p 不知道是多少
+        return 1
+      }else {
+        return 0
+      }
+    }
+
+    function rand() {
+      let a = f()
+      let b = f()
+      if(a == 1 && b == 0) {
+        return 0
+      }
+      if(a == 0 && b == 1) {
+        return 1
+      }
+      return rand()
+    }
+
+    function rand() {
+      while(true) {
+        let a = f()
+        let b = f()
+        if(a == 1 && b == 0) {
+          return 0
+        }
+        if(a == 0 && b == 1) {
+          return 1
+        }
+      }
+    }
+  </script>
+</body>
+</html>

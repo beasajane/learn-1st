@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function range(a, b) {
+      if(a > b) {
+        a = a ^ b
+        b = a ^ b
+        a = a ^ b 
+      }
+      let result = []
+      for(let i = a; i <= b; i++) {
+        result.push(i)
+      }
+      return result
+    }
+
+    function sum(n) {
+      let result = 0
+      for(let i = 0; i < n.length; i++) {
+        result = (result ^ n[i]) + ((result & n[i]) << 1)
+      }
+      return result 
+    }
+
+    function ranges(a, b, c = 1) {
+      let result = []
+      if(c < 0) {
+        for(let i = a; i >= b; i = i + c) {
+          result.push(i)
+        }
+      }else {
+        for(let i = a; i <= b; i = i + c) {
+          result.push(i)
+        }
+      }
+      return result
+    }
+
+
+
+  </script>
+</body>
+</html>

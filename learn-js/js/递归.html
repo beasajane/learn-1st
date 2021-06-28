@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    
+    function f(startx = 1, starty = 1 ,history = '') {
+      if(startx == 5 && starty == 8) {
+        console.log(history)
+        return 
+      }
+      if(startx > 5 || starty > 8) {
+        return 
+      }
+      f(startx + 1, starty,history + '>') 
+      f(startx, starty + 1,history + '^')
+    }
+
+    function pos(startx = 1, starty = 1 ,history = '') {
+      if(startx == 5 && starty == 8) {
+        console.log(history)
+        return 
+      }
+      if(startx > 5 || starty > 8) {
+        return 
+      }
+      pos(startx + 1, starty,history + '1') 
+      pos(startx, starty + 1,history + '2')
+    }
+        // 深度搜索  广度
+    // 回溯算法
+    // 动态规划
+    // 二叉树
+
+  
+  </script>
+</body>
+</html>

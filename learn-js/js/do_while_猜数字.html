@@ -1,0 +1,13 @@
+let guess = +prompt('input your guess')
+let m = Math.floor(Math.random() * 100)
+do {
+    if (guess > m) {
+        alert('too big')
+    }else if (guess < m) { 
+        alert('too small')
+    }else {
+        alert('congratulations，you got it')
+    break
+    }
+    guess = +prompt('please enter your guess')
+}while(m)

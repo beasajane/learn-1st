@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 消除了合成效益法则 
+    // 正着推导(演)  反着推导（演）  名词：动态规划
+    let fibs = []  // 将值存起来，不重复计算， 时间负责复杂度为 O(N) 而不是（5/ 3) 的指数级增长
+     function fib(n) {
+       if (n <= 1) return 1
+       if (n < fibs.length) return fibs[n] // 将值存起来
+       var answer = fib(n - 2) + fib(n - 1)
+       fibs[n] = answer
+       return answer 
+     }
+
+  </script>
+</body>
+</html>

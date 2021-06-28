@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+
+// 终态
+    function isEqual(a, b) {  // 写好自己的逻辑，当需要递归（嵌套），重复，才调用函数或自己的本身
+      if (a === b) {  // 判断对象 是不是同一个值 === 值类型（tepyof）一样，值一样
+        return true 
+      }
+      var typea = typeof a
+      var typeb = typeof b  // 数组的类型  是对象
+      if( typea !== typeb) { // 类型不同
+        return false
+      }
+      else { 
+        // 类型相同 有数组 ，有对象， null 都返回 object
+        if (typea == 'object') { 
+          // 都是对象 typeof [array]  返回是一个 object//无深层次判断，只判断数组的值是否相同 // [1,2,3] { 0: 1, 1: 2, 2: 3}
+          if ((Array.isArray(a) && !Array.isArray(b)) || (!Array.isArray(a) && Array.isArray(b))) {  // 一个数组一个不是
+            return false
+          } 
+          // 往后 同为数组或同为对象
+          if (Array.isArrayl(a)) { // 都是数组 判断长度
+            if (a.length !== b.length){ // 长度不同
+              return false 
+            }
+          } else { // 都是对象， 判断属性的数量及值（内容）是否相同
+              var keysa = Object.keys(a)
+              var keysb = Object.keys(b)
+              if(keysa.length !== keysb.length) { // 属性集合长度不同
+                return false 
+              }  
+              // else { // 长度相同，判断属性集合内容相同
+              //   keysa.sort()
+              //   keysb.sort()
+              //   for(var index in keysa) {
+              //     if (keysa[index] !== keysb[index]) { // 属性名集合名字不同
+              //       return false 
+              //     }
+              //   }
+              // }
+          }
+
+            // 更深层次的判断  判断对象的属性的值
+            // {a:2, c:undefined}  {a:2, b:undefined}
+          for(var key in a) { // 声明一个 key 变量，让这个变量属于 对象a
+            // var key in a 怎么能循环呢？
+            if(!(key in b)) { 
+              return false
+            }
+            if(!isEqual(a[key], b[key])) { // 判断两个对象 key的值是不相等 若 a[key] 为对象，则需要判断对象里面的属性值（如果该属性值是对象，则判断是否相等，如果又是对象（继续，所以是嵌套，且是自嵌套，即递归））是否相等，
+              return false 
+            }
+          }
+          return true
+        } 
+        else { // 基本类型
+          return a === b
+        }
+      }
+    }
+
+
+    // for in 循环遍历  遍历书写的顺序
+
+    //  数组和对象
+    function keys(obj) { // Object.keys
+      var result = []
+      for (var key in obj) {
+        result.push(key)
+      }
+      return result
+    }
+
+
+
+
+    function isEqual(a, b) {  // 写好自己的逻辑，当需要递归（嵌套），重复，才调用函数或自己的本身
+      if (a === b) {  // 判断对象 是不是同一个值 === 值类型（tepyof）一样，值一样
+        return true 
+      }
+
+      var typea = typeof a
+      var typeb = typeof b  // 数组的类型  是对象
+
+      if( typea !== typeb) { // 类型不同
+        return false
+      }else { //类型相同
+        if (typea == 'object') { 
+          //typeof [array]  返回是一个 object
+          //无深层次判断，只判断数组的值是否相同
+          var keysa = keys(a)
+          var keysb = keys(b)
+          if(keysa.length !== keysb.length) { // 属性集合长度不同
+            return false 
+          }
+          // else {
+          //   keysa.sort()
+          //   keysb.sort()
+          //   // 属性名对应相同
+          //   for(var index in keysa) {
+          //     if (keysa[index] !== keysb[index]) { // 属性名集合名字不同
+          //       return false 
+          //     }
+          //   }
+          // }
+
+           // 更深层次的判断  判断对象的属性的值
+          for(var key in a) { // 声明一个 key 变量，让这个变量属于 对象a
+             // var key in a 怎么能循环呢？
+            if(!isEqual(a[key], b[key])) { // 判断两个对象 key的值是不相等 若 a[key] 为对象，则需要判断对象里面的属性值（如果该属性值是对象，则判断是否相等，如果又是对象（继续，所以是嵌套，且是自嵌套，即递归））是否相等，
+              return false 
+            }
+          }
+          return true
+        } else {
+          return a === b
+        }
+      }
+    }
+
+
+
+    //对象的深层次嵌套
+    function isEqual(a, b) {  // 写好自己的逻辑，当需要递归（嵌套），重复，才调用函数或自己的本身
+      if (a === b) {  // 判断对象 是不是同一个值 === 值类型（tepyof）一样，值一样
+        return true 
+      }
+
+      var typea = typeof a
+      var typeb = typeof b  // 数组的类型  是对象
+
+      if( typea !== typeb) { // 类型不同
+        return false
+      }else { //类型相同
+        if (typea == 'object') { 
+          //typeof [array]  返回是一个 object
+          //无深层次判断，只判断数组的值是否相同
+          var keysa = keys(a)
+          var keysb = keys(b)
+          if(keysa.length !== keysb.length) { // 属性集合长度不同
+            return false 
+          }else {
+            keysa.sort()
+            keysb.sort()
+            // 属性名对应相同
+            for(var index in keysa) {
+              if (keysa[index] !== keysb[index]) { // 属性名集合名字不同
+                return false 
+              }
+            }
+          }
+
+           // 更深层次的判断  判断对象的属性的值
+          for(var key in a) { // 声明一个 key 变量，让这个变量属于 对象a
+             // var key in a 怎么能循环呢？
+            if(!isEqual(a[key], b[key])) { // 判断两个对象 key的值是不相等 若 a[key] 为对象，则需要判断对象里面的属性值（如果该属性值是对象，则判断是否相等，如果又是对象（继续，所以是嵌套，且是自嵌套，即递归））是否相等，
+              return false 
+            }
+          }
+          return true
+        } else {
+          return a === b
+        }
+      }
+    }
+    //  数组和对象
+    function keys(obj) {
+      var result = []
+      for (var key in obj) {
+        result.push(key)
+      }
+      return result
+    }
+    // ['a', 'b', 'c'] == ['b' , 'c' ,'a'] 对比的是值
+    //数组的排序 函数  sort（） 不传参数按照字典序排列  属性集相同
+    g = ['a', 'b', 'c']
+    g.sort()
+    h = 
+
+   // 次态  有重复循环 
+   // bug {a: 1}  {a:2, b:undefined}  可以用in来判断
+
+    function isEqual(a, b) {  // 写好自己的逻辑，当需要递归（嵌套），重复，才调用函数或自己的本身
+      if (a === b) {  // 判断对象 是不是同一个值 === 值类型（tepyof）一样，值一样
+        return true 
+      }
+
+      var typea = typeof a
+      var typeb = typeof b  // 数组的类型  是对象
+
+      if( typea !== typeb) { // 类型不同
+        return false
+      }else { //类型相同
+        if (typea == 'object') {
+          for(var key in a) { // 声明一个 key 变量，让这个变量属于 对象a
+            if(!isEqual(a[key], b[key])) { // 判断两个对象 key的值是不相等 若 a[key] 为对象，则需要判断对象里面的属性值（如果该属性值是对象，则判断是否相等，如果又是对象（继续，所以是嵌套，且是自嵌套，即递归））是否相等，
+              return false 
+            }
+          }
+          for(var key in b) { // 声明一个 key 变量，让这个变量属于 对象b
+            // var key in a 怎么能循环呢？
+            if(!isEqual(a[key], b[key])) { // 判断两个对象 key的值是否不相等
+              return false 
+            }
+          }
+          return true
+        } else {
+          return a === b
+        }
+      }
+    }
+
+   // 初态
+    function isEqual(a, b) {  
+      if (a === b) {  // 判断对象 是不是同一个值 === 值类型（tepyof）一样，值一样
+        return true 
+      }
+
+      var typea = typeof a
+      var typeb = typeof b
+      // 类型 不一样 false  一样：且为object 那么继续判断 （只有对象值）
+      if( typea !== typeb) {
+        return false
+      }else {
+        if (typea == 'object') {
+          for(var key in a) { // 声明一个 key 变量，让这个变量属于 对象a
+            if(a[key] !== b[key] ) { // 判断两个对象 key的值是不相等 若 a[key] 为对象，则需要判断对象里面的属性值（如果该属性值是对象，则判断是否相等，如果又是对象（继续，所以是嵌套，且是自嵌套，即递归））是否相等，
+              return false 
+            }
+          }
+          for(var key in b) { // 声明一个 key 变量，让这个变量属于 对象b
+            // var key in a 怎么能循环呢？
+            if(a[key] !== b[key]) { // 判断两个对象 key的值是否不相等
+              return false 
+            }
+          }
+          return true
+        }else {
+          a == b
+        }
+      }
+
+    }
+  </script>
+</body>
+</html>
