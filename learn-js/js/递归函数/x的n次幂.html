@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function power(x,n) {
+      if(n == 0) {
+        return 1
+      }
+      if(n == 1) {
+        return x
+      }
+
+      if((n & 1) == 0) {
+        return power(x,n >> 1) * power(x, n >> 1)
+      }else {
+        return power(x,n >> 1) * power(x, n >> 1) * x
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function s(n) {
+      if(n == 1) { // 基准case
+        return 1
+      }else {
+        return s(n - 1) + n // 每一次调用递归，都要向着基准case趋近
+      }
+    } // 设计法则，假设所有的递归都能运行
+    // 合成效益法则，不做重复性工作
+  </script>
+</body>
+</html>
